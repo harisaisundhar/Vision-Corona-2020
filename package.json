@@ -5,6 +5,7 @@
     "homepage": "https://harisaisundhar.github.io/Vision-Corona-2020",
     "dependencies": {
         "cra-template": "1.0.3",
+        "jquery": "^3.4.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-scripts": "3.4.1"

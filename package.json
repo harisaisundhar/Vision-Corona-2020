@@ -4,11 +4,19 @@
     "private": true,
     "homepage": "https://harisaisundhar.github.io/Vision-Corona-2020",
     "dependencies": {
+        "@devexpress/dx-react-chart": "^2.6.2",
+        "@devexpress/dx-react-chart-bootstrap4": "^2.6.2",
+        "@devexpress/dx-react-core": "^2.6.2",
+        "colors": "^1.4.0",
         "cra-template": "1.0.3",
         "jquery": "^3.4.1",
+        "material-ui": "^1.0.0-beta.47",
+        "node-sass": "^4.13.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-scripts": "3.4.1"
+        "react-scripts": "3.4.1",
+        "recharts": "^1.8.5",
+        "rough-charts": "^0.4.2-alpha.0"
     },
     "scripts": {
         "start": "react-scripts start",

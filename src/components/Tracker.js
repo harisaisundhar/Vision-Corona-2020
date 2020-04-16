@@ -1,24 +1,25 @@
 import React from 'react';
 import jQuery from 'jquery';
+import $ from 'jquery'; 
 
-const header = ('.stats__header');
-var bar = ('.stats__item-bar');
-var nums = ('.stats__item-num');
-var overlay = ('.stats__overlay');
-var back = ('.stats__overlay-back');
+var header = $('.stats__header');
+var bar  = $('.stats__item-bar');
+var nums = $('.stats__item-num');
+var overlay = $('.stats__overlay');
+var back = $('.stats__overlay-back');
 var isOpen = false;
 
-var vYear = ('#year');
-var vAvg = ('#avg');
-var vGames = ('#games');
-var vGoal = ('#goals');
+var vYear = $('#year');
+var vAvg = $('#avg');
+var vGames = $('#games');
+var vGoal = $('#goals');
 
 jQuery(document).on('ready', function($){
     entrance();
   });  
 
 bar.on('click', showOverlay);
-back.on('click', showOverlay);
+back.on('click');
 
 function entrance() {
   bar.addClass('active');
@@ -39,7 +40,7 @@ function showOverlay() {
     nums.css('opacity', '0');
     isOpen = true;
     
-   updateInfo((this).parent().index());
+   updateInfo($(this).parent().index());
   } else {
     overlay.css('transition', 'all 0.4s cubic-bezier(0.755, 0.05, 0.855, 0.06)').removeClass('active');
     bar.addClass('active').removeAttr('style');
@@ -116,74 +117,80 @@ function updateInfo(index) {
 }
 
 class Tracker extends React.Component {
-    
+
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js";
+
+  }
     render() {
         return (
 
-            <main className="stats">
-              <header className="stats__header">
-                <div className="stats__header-num">
-                  <p>8</p>
-                </div>
-                <div className="stats__header-name">
-                  <p>Alex<span>Ovechkin</span></p>
-                </div>
-              </header>
-              <ul className="stats__list">
-                <li className="stats__item">
-                  <p className="stats__item-num">65</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">56</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">50</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">32</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">38</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">32</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">51</p>
-                  <div className="stats__item-bar" />
-                </li>
-                <li className="stats__item">
-                  <p className="stats__item-num">50</p>
-                  <div className="stats__item-bar" />
-                </li>
-              </ul>
-              <div className="stats__overlay">
-                <div className="stats__overlay-back">
-                  <svg fill="white" xmlns="http://www.w3.org/2000/svg" width={36} height={36} viewBox="0 0 36 36"><path d="M30 16.5H11.74l8.38-8.38L18 6 6 18l12 12 2.12-2.12-8.38-8.38H30v-3z" /></svg>
-                  <p id="year">2009-2010</p>
-                </div>
-                <div className="stats__overlay-avg">
-                  <p className="avg" id="avg">0.69</p>
-                  <p>Goals per game</p>
-                </div>
-                <div className="stats__overlay-info">
-                  <div className="stats__overlay-info-half">
-                    <p id="goals">50</p>
-                    <p>Goals</p>
-                  </div>
-                  <div className="stats__overlay-info-half">
-                    <p id="games">72</p>
-                    <p>Games</p>
-                  </div>
-                </div>
-              </div>
-            </main>
+          <main class="stats">
+  <header class="stats__header">
+    <div class="stats__header-num">
+      <p>8</p>
+    </div>
+    <div class="stats__header-name">
+      <p>Alex<span>Ovechkin</span></p>
+    </div>
+  </header>
+  <ul class="stats__list">
+    <li class="stats__item">
+      <p class="stats__item-num">65</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">56</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">50</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">32</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">38</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">32</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">51</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">50</p>
+      <div class="stats__item-bar"></div>
+    </li>
+  </ul>
+  <div class="stats__overlay">
+    <div class="stats__overlay-back">
+      <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path d="M30 16.5H11.74l8.38-8.38L18 6 6 18l12 12 2.12-2.12-8.38-8.38H30v-3z"></path></svg>
+      <p id="year">2009-2010</p>
+    </div>
+    <div class="stats__overlay-avg">
+      <p class="avg" id="avg">0.69</p>
+      <p>Goals per game</p>
+    </div>
+    <div class="stats__overlay-info">
+      <div class="stats__overlay-info-half">
+        <p id="goals">50</p>
+        <p>Goals</p>
+      </div>
+      <div class="stats__overlay-info-half">
+        <p id="games">71</p>
+        <p>Games</p>
+      </div>
+    </div>
+  </div>
+</main>
           );
     }
 }

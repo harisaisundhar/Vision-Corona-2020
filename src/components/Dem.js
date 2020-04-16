@@ -15,7 +15,7 @@ const data = [
   { year: '1980', population: 4.440 },
   { year: '1990', population: 5.310 },
   { year: '2000', population: 6.127 },
-  { year: '2010', population: 6.930 },
+  { year: '2010', population: 6.920 },
 ];
 
 const compare = (

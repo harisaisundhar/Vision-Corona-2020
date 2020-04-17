@@ -118,12 +118,6 @@ function updateInfo(index) {
 
 class Tracker extends React.Component {
 
-  componentDidMount() {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js";
-
-  }
     render() {
         return (
 

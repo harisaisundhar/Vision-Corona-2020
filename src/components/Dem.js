@@ -47,6 +47,7 @@ export default class Demo extends React.PureComponent {
     const { data: chartData, selection , hover } = this.state;
 
     return (
+
       <div>
         <span>
           Selected value:

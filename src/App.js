@@ -10,11 +10,11 @@ class App extends Component {
   render() {
     return <Router>
     <Switch>
-      <Route exact path="/" component={main}></Route>
-      <Route exact path="/india" component={india}></Route>
-      <Route exact path="/404" component={err}></Route>
-      <Route exact path="/check" component={chk}></Route>
-      <Redirect to="/404"></Redirect>
+      <Route exact path="/Vision-Corona-2020/" component={main}></Route>
+      <Route exact path="/Vision-Corona-2020/india" component={india}></Route>
+      <Route exact path="/Vision-Corona-2020/404" component={err}></Route>
+      <Route exact path="/Vision-Corona-2020/check" component={chk}></Route>
+      <Redirect to="/Vision-Corona-2020/404"></Redirect>
       </Switch>
     </Router>
   }

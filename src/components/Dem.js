@@ -57,7 +57,7 @@ export default class Demo extends React.PureComponent {
       <div >
         <span>
         <br></br><br></br>
-          Selected value:
+          Corona count:
           {' '}
           {selection.length ? data[selection[0].point].population : undefined}
         </span>

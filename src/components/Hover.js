@@ -4,12 +4,13 @@ import createClass from 'create-react-class';
 import { BarChart, Legend, chartConstants } from 'lucid-ui';
 
 const data = [
-  { x: 'Delhi', cases: 1707, deaths: 72, recovered: 42 },
-  { x: 'Maharashtra', cases: 1707, deaths: 331, recovered: 201 },
-  { x: 'Madhya Pradesh', cases: 1355, deaths: 69, recovered: 69 },
-  { x: 'Telengana', cases: 791, deaths: 186, recovered: 18 },
+  { x: 'Delhi',  deaths: 72, cases: 1707, recovered: 42 },
+  { x: 'Maharashtra',  deaths: 331, cases: 1707, recovered: 201 },
+  { x: 'Madhya Pradesh',  deaths: 69, cases: 1355,recovered: 69 },
+  { x: 'Telengana',  deaths: 186, cases: 791, recovered: 18 },
+  { x: 'Tamil Nadu', deaths: 283, cases: 1323, recovered: 15 },
 ];
-const yAxisFields = ['cases', 'deaths', 'recovered'];
+const yAxisFields = ['deaths', 'cases', 'recovered'];
 const palette = chartConstants.PALETTE_7;
 
 const style = {

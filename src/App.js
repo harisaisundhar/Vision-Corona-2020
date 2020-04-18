@@ -4,7 +4,7 @@ import main from './components';
 import err from './components/404';
 import chk from './components/Pencil';
 
-import {BrowserRouter as Router,Route,Switch,Link,Redirect} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom';
 
 class App extends Component {
   render() {

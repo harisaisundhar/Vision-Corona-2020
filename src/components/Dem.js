@@ -81,7 +81,7 @@ export default class Demo extends React.PureComponent {
       <Link to="/india">India survey</Link>
       </h3>
       <br></br>
-      <img src={logo} alt="loading..." /><br></br><br></br><br></br>
+      <img src={logo} alt="Corona Tracker" /><br></br><br></br><br></br>
       </center>
       
       </div>

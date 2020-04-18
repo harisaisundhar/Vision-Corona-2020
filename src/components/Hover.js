@@ -4,18 +4,12 @@ import createClass from 'create-react-class';
 import { BarChart, Legend, chartConstants } from 'lucid-ui';
 
 const data = [
-  { x: 'Monday', apples: 10, pears: 20, peaches: 35, bananas: 15, oranges: 5 },
-  { x: 'Tuesday', apples: 20, pears: 5, peaches: 20, bananas: 25, oranges: 27 },
-  {
-    x: 'Wednesday',
-    apples: 5,
-    pears: 15,
-    peaches: 5,
-    bananas: 20,
-    oranges: 35,
-  },
+  { x: 'Delhi', cases: 1707, deaths: 72, recovered: 42 },
+  { x: 'Maharashtra', cases: 1707, deaths: 331, recovered: 201 },
+  { x: 'Madhya Pradesh', cases: 1355, deaths: 69, recovered: 69 },
+  { x: 'Telengana', cases: 791, deaths: 186, recovered: 18 },
 ];
-const yAxisFields = ['apples', 'pears', 'peaches', 'bananas', 'oranges'];
+const yAxisFields = ['cases', 'deaths', 'recovered'];
 const palette = chartConstants.PALETTE_7;
 
 const style = {
@@ -32,7 +26,7 @@ export default createClass({
           data={data}
           yAxisFields={yAxisFields}
           yAxisMin={0}
-          yAxisTitle='Fruit Count'
+          yAxisTitle='Corona Count'
           palette={palette}
         />
 

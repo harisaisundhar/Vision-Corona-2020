@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom'
+import logosd from './logo.png';
+import {Link} from 'react-router-dom';
 import {
   Chart,
   BarSeries,
@@ -10,6 +11,7 @@ import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css
 import { EventTracker, HoverState, SelectionState } from '@devexpress/dx-react-chart';
 import logo from './load.gif'
 
+console.log(logosd);
 const data = [
   { conuntry: 'United States', population: 712184 },
   { conuntry: 'Spain', population: 191726 },
@@ -75,7 +77,9 @@ export default class Demo extends React.PureComponent {
         </div>
       </div><center>
       <br></br>
+      <h3 >
       <Link to="/india">India survey</Link>
+      </h3>
       <br></br>
       <img src={logo} alt="loading..." /><br></br><br></br><br></br>
       </center>

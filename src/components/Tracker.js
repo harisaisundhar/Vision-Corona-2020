@@ -8,7 +8,7 @@ class Tracker extends React.Component {
           <main class="stats">
   <header class="stats__header">
     <div class="stats__header-num">
-      <p>1</p>
+      <p>#</p>
     </div>
     <div class="stats__header-name">
       <p>Track<span>India</span></p>

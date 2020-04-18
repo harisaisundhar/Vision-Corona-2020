@@ -23,6 +23,13 @@ max-height: 950px;
 background-color: rgba(255, 160, 71, 0.274);
 }
 
+h3{
+    font-weight: 100 !important;
+    font-family: "Noto Sans", helvetica, arial, sans-serif;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+}
 h1.introh{
 font-weight: 100 !important;
 font-family: "Noto Sans", helvetica, arial, sans-serif;

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom'
 import {
   Chart,
   BarSeries,
@@ -39,6 +40,7 @@ export default class Demo extends React.PureComponent {
         this.setState(({ selection }) => ({
           selection: selection[0] && compare(selection[0], target) ? [] : [target],
         }));
+      
       }
     };
     this.changeHover = hover => this.setState({ hover });
@@ -72,9 +74,11 @@ export default class Demo extends React.PureComponent {
         </div>
       </div><center>
       <br></br>
+      <Link to="/india">India survey</Link>
+      <br></br>
       <img src={logo} alt="loading..." /><br></br><br></br><br></br>
-      <h1 className="introh centered">We are SoSweet!<br /><span className="subintroh lightblue">Handcrafted, responsive web design</span></h1>  
       </center>
+      
       </div>
     );
   }

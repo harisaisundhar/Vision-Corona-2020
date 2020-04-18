@@ -18,8 +18,8 @@ width:100% !important;
 position:relative;
 padding:0;
 overflow:hidden;
-min-height: 650px;
-max-height: 800px;
+min-height: 800px;
+max-height: 950px;
 background-color: rgba(255, 160, 71, 0.274);
 }
 

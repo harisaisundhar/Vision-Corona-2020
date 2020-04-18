@@ -1,54 +1,53 @@
-import * as React from 'react';
-import {
-  Chart,
-  BarSeries,
-  ArgumentAxis,
-  ValueAxis,
-} from '@devexpress/dx-react-chart-bootstrap4';
-import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
-import { EventTracker, HoverState } from '@devexpress/dx-react-chart';
+import _ from 'lodash';
+import React from 'react';
+import createClass from 'create-react-class';
+import { BarChart, Legend, chartConstants } from 'lucid-ui';
 
 const data = [
-  { year: '1950', population: 2.525 },
-  { year: '1960', population: 3.018 },
-  { year: '1970', population: 3.682 },
-  { year: '1980', population: 4.440 },
-  { year: '1990', population: 5.310 },
-  { year: '2000', population: 6.127 },
-  { year: '2010', population: 6.930 },
+  { x: 'Monday', apples: 10, pears: 20, peaches: 35, bananas: 15, oranges: 5 },
+  { x: 'Tuesday', apples: 20, pears: 5, peaches: 20, bananas: 25, oranges: 27 },
+  {
+    x: 'Wednesday',
+    apples: 5,
+    pears: 15,
+    peaches: 5,
+    bananas: 20,
+    oranges: 35,
+  },
 ];
+const yAxisFields = ['apples', 'pears', 'peaches', 'bananas', 'oranges'];
+const palette = chartConstants.PALETTE_7;
 
-export default class Demo extends React.PureComponent {
-  constructor(props) {
-    super(props);
+const style = {
+  paddingTop: '10rem',
+};
 
-    this.state = {
-      data,
-      hover: undefined,
-    };
-
-    this.changeHover = hover => this.setState({ hover });
-  }
-
+export default createClass({
   render() {
-    const { data: chartData, hover } = this.state;
-
     return (
-      <div className="card">
-        <Chart
-          data={chartData}
-        >
-          <ArgumentAxis />
-          <ValueAxis />
+      
+      <div style={style}>
+        <BarChart
+          width={750}
+          data={data}
+          yAxisFields={yAxisFields}
+          yAxisMin={0}
+          yAxisTitle='Fruit Count'
+          palette={palette}
+        />
 
-          <BarSeries
-            valueField="population"
-            argumentField="year"
-          />
-          <EventTracker />
-          <HoverState hover={hover} onHoverChange={this.changeHover} />
-        </Chart>
+        <Legend style={{ verticalAlign: 'top' }}>
+          {_.map(yAxisFields, (field, i) => (
+            <Legend.Item
+              key={field}
+              hasPoint
+              color={palette[i % palette.length]}
+            >
+              {field}
+            </Legend.Item>
+          ))}
+        </Legend>
       </div>
     );
-  }
-}
+  },
+});

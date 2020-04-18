@@ -70,11 +70,11 @@ export default class Graph extends PureComponent {
     return (
       <div>
         <p>Click each rectangle </p>
-        <BarChart width={150} height={40} data={data}>
+        <BarChart width={750} height={400} data={data}>
           <Bar dataKey="uv" onClick={this.handleClick}>
             {
                 data.map((entry, index) => (
-                  <Cell cursor="pointer" fill={index === activeIndex ? '#82ca9d' : '#8884d8'} key={`cell-${index}`} />
+                  <Cell cursor="pointer" fill={index === activeIndex ? '#82ch9d' : '#8884d8'} key={`cell-${index}`} />
                 ))
               }
           </Bar>

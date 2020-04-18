@@ -7,7 +7,7 @@ import {
 } from '@devexpress/dx-react-chart-bootstrap4';
 import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
 import { EventTracker, HoverState, SelectionState } from '@devexpress/dx-react-chart';
-
+import logo from './load.gif'
 const data = [
   { year: '1950', population: 2.525 },
   { year: '1960', population: 3.018 },
@@ -23,6 +23,7 @@ const compare = (
 ) => series === targetSeries && point === targetPoint;
 
 export default class Demo extends React.PureComponent {
+  
   constructor(props) {
     super(props);
 
@@ -45,19 +46,18 @@ export default class Demo extends React.PureComponent {
 
   render() {
     const { data: chartData, selection , hover } = this.state;
-
+    require('../assets/css/home.css')
     return (
-
-      <div>
+      <div className="fullwidthbanner-container" length="10000">
+      <div >
         <span>
+        <br></br><br></br>
           Selected value:
           {' '}
           {selection.length ? data[selection[0].point].population : undefined}
         </span>
         <div className="card">
-          <Chart
-            data={chartData}
-          >
+          <Chart width="700" data={chartData}>
             <ArgumentAxis />
             <ValueAxis />
 
@@ -70,6 +70,11 @@ export default class Demo extends React.PureComponent {
             <HoverState hover={hover} onHoverChange={this.changeHover} />
           </Chart>
         </div>
+      </div><center>
+      <br></br>
+      <img src={logo} alt="loading..." /><br></br><br></br><br></br>
+      <h1 className="introh centered">We are SoSweet!<br /><span className="subintroh lightblue">Handcrafted, responsive web design</span></h1>  
+      </center>
       </div>
     );
   }

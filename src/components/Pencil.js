@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import data from "./data"; 
+import data from "../assets/data/data.json"; 
 
 class Example3 extends Component {
 	render() {
 		return (
-            <div>
+            <div >
                 {
                   data.Skills.map((skill) => {
                     return (

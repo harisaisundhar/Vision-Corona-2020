@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import Tracker from './components/Tracker';
-import Dem from './components/Dem';
-import Pen from './components/Pencil';
-import Hov from './components/Hover';
+import india from './components/india';
+import main from './components';
+import err from './components/404';
 
-
+import {BrowserRouter as Router,Route,Switch,Link,Redirect} from 'react-router-dom';
 
 class App extends Component {
   render() {
-    return (
-      <div>
-  
-  <Tracker/>
-      <Hov/>
-      </div>
-    );
+    return <Router>
+    <Switch>
+      <Route exact path="/" component={main}></Route>
+      <Route exact path="/india" component={india}></Route>
+      <Route exact path="/404" component={err}></Route>
+      <Redirect to="/404"></Redirect>
+      </Switch>
+    </Router>
   }
 }
 

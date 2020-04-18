@@ -9,14 +9,15 @@ import {
 import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
 import { EventTracker, HoverState, SelectionState } from '@devexpress/dx-react-chart';
 import logo from './load.gif'
+
 const data = [
-  { year: '1950', population: 2.525 },
-  { year: '1960', population: 3.018 },
-  { year: '1970', population: 3.682 },
-  { year: '1980', population: 4.440 },
-  { year: '1990', population: 5.310 },
-  { year: '2000', population: 6.127 },
-  { year: '2010', population: 6.920 },
+  { conuntry: 'United States', population: 712184 },
+  { conuntry: 'Spain', population: 191726 },
+  { conuntry: 'Italy', population: 	172434 },
+  { conuntry: 'Germany', population: 141399 },
+  { conuntry: 'France', population: 109252 },
+  { conuntry: 'United Kingdom', population: 108692 },
+  { conuntry: 'India', population: 14793 },
 ];
 
 const compare = (
@@ -65,7 +66,7 @@ export default class Demo extends React.PureComponent {
 
             <BarSeries
               valueField="population"
-              argumentField="year"
+              argumentField="conuntry"
             />
             <EventTracker onClick={this.click} />
             <SelectionState selection={selection} />

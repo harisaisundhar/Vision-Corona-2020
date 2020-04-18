@@ -5,7 +5,7 @@ class Tracker extends React.Component {
     render() {
         return (
 
-          <main class="stats">
+      <main class="stats">
   <header class="stats__header">
     <div class="stats__header-num">
       <p>#</p>
@@ -14,7 +14,6 @@ class Tracker extends React.Component {
       <p>Track<span>India</span></p>
     </div>
   </header>
-  
 
 </main>
           );

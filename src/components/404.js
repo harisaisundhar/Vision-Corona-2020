@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 class Tracker extends React.Component {
 
     render() {
@@ -7,10 +7,10 @@ class Tracker extends React.Component {
         return (
             <div>
             <nav className="shelf">
-              <a className="book home-page">Home page</a>
-              <a className="book about-us">About us</a>
-              <a className="book contact">Contact</a>
-              <a className="book faq">F.A.Q.</a>
+              <a className="book home-page"><Link to="/">Home Page</Link></a>
+              <a className="book about-us"><Link to="/india">India Survey</Link></a>
+              <a className="book contact"><a href="https://harisaisundhar.github.io/portfolio/">Contact</a></a>
+           
               <span className="book not-found" />
               <span className="door left" />
               <span className="door right" />
